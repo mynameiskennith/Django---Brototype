@@ -1,0 +1,13 @@
+{% extends 'blank_layout.html'%}
+{% block content_name %}
+<h1>Create</h1>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    Title : <input type="text" name="title">
+    Year : <input type="text" name="year">
+    Summary : <input type="text" name="summary">
+
+    <button type="submit">create</button>
+</form>
+{% endblock content_name %}
