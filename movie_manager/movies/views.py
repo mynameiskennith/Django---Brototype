@@ -1,10 +1,12 @@
 from django.shortcuts import render
-
+from models import MovieInfo
 # Create your views here.
 def create(request):
     if request.POST:
-        print(request.POST)
-        print(request.POST.get('title'))
+        title = request.POST.get('title')
+        year = request.POST.get('year')
+        desc = request.POST.get('summary')
+        
     return render(request,'create.html')
 
 def list(request):
